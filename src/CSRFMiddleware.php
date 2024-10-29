@@ -26,9 +26,9 @@ class CSRFMiddleware extends MiddleWareInterface {
 	protected ?bool $required;
 
 	public function __construct(protected Session $session, Config $config, ?bool $required = null) {
-		$this->form_name = $config->get('csrf.form_name', 'mako_csrf_token');
-		$this->missing_token_message = $config->get('csrf.missing_token_message', 'The CSRF token is missing.');
-		$this->bad_token_message = $config->get('csrf.bad_token_message', 'The CSRF token is invalid.');
+		$this->form_name = $config->get('csrf::csrf.form_name', 'mako_csrf_token');
+		$this->missing_token_message = $config->get('csrf::csrf.missing_token_message', 'The CSRF token is missing.');
+		$this->bad_token_message = $config->get('csrf::csrf.bad_token_message', 'The CSRF token is invalid.');
 		$this->required = $required;
 	}
 

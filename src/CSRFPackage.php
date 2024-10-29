@@ -21,8 +21,8 @@ class CSRFPackage extends Package {
 		$config = $this->container->get(Config::class);
 
 		// get variables
-		$form_name = $config->get('csrf.form_name', 'mako_csrf_token');
-		$view_var_name = $config->get('csrf.view_var_name', 'mako_csrf_token');
+		$form_name = $config->get('csrf::csrf.form_name', 'mako_csrf_token');
+		$view_var_name = $config->get('csrf::csrf.view_var_name', 'mako_csrf_token');
 		$csrf_token = $session->generateOneTimeToken();
 
 		// register view variables
