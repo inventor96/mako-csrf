@@ -91,7 +91,7 @@ There are two variables made available in views, and both are based on the `view
 - `$mako_csrf_token_input`: An HTML hidden input element containing the CSRF token with the `name` attribute set to the `form_name` config option. This can be used directly in HTML forms.
     ```html
     <form>
-        {{ $mako_csrf_token_input }}
+        {{ raw:$mako_csrf_token_input }}
         <!-- The generated element would look like <input type="hidden" name="mako_csrf_token" value="..." /> -->
     </form>
     ```
