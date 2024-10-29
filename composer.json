@@ -1,0 +1,23 @@
+{
+    "name": "inventor96/mako-csrf",
+    "type": "library",
+    "description": "A middleware wrapper around Mako's session tokens as an anti-CSRF mechanism.",
+    "keywords": ["mako", "csrf"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Caleb Hornbeck",
+            "homepage": "https://github.com/inventor96",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "inventor96\\MakoCSRF\\": "src"
+        }
+    },
+    "require": {
+        "php": "~8.1.0|~8.2.0|~8.3.0",
+        "mako/framework": "^10.0"
+    }
+}
