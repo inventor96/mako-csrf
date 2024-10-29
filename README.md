@@ -13,7 +13,7 @@ A middleware wrapper around Mako's [session tokens](https://makoframework.com/do
     [
         'packages' => [
             'web' => [
-                inventor96\MakoCSRF\CSRFPackage::class
+                \inventor96\MakoCSRF\CSRFPackage::class
             ],
         ],
     ];
@@ -22,13 +22,13 @@ A middleware wrapper around Mako's [session tokens](https://makoframework.com/do
 1. Register the middleware:
     `app/http/routing/middleware.php`:
     ```php
-    $dispatcher->registerGlobalMiddleware(inventor96\MakoCSRF\CSRFMiddleware::class);
+    $dispatcher->registerGlobalMiddleware(\inventor96\MakoCSRF\CSRFMiddleware::class);
     ```
 
     It's also recommended you set a priority lower than the Mako default of 100:
     `app/http/routing/middleware.php`:
     ```php
-    $dispatcher->setMiddlewarePriority(inventor96\MakoCSRF\CSRFMiddleware::class, 25);
+    $dispatcher->setMiddlewarePriority(\inventor96\MakoCSRF\CSRFMiddleware::class, 25);
     ```
     At a bare minimum, it should be processed before any other middleware that might cause a change in application.
 
