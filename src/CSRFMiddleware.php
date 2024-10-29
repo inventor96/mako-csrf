@@ -9,7 +9,7 @@ use mako\http\exceptions\BadRequestException;
 use mako\http\routing\middleware\MiddlewareInterface;
 use mako\session\Session;
 
-class CSRFMiddleware extends MiddleWareInterface {
+class CSRFMiddleware implements MiddleWareInterface {
 	/**
 	 * @var array An array of HTTP methods that would cause a change in the application state.
 	 */
